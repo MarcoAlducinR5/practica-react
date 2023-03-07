@@ -1,0 +1,115 @@
+.principal{
+    padding: 0.5rem;
+}
+/* DatosElementos */
+.elementos{
+    margin: 0.25rem 0.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: oldlace;
+    background: #75A438;
+    background: -moz-radial-gradient(center, #75A438 0%, #847921 50%, #75A438 100%);
+    background: -webkit-radial-gradient(center, #75A438 0%, #847921 50%, #75A438 100%);
+    background: radial-gradient(ellipse at center, #75A438 0%, #847921 50%, #75A438 100%);
+}
+.elementos p{
+    padding-bottom: 0.2rem;
+}
+.elementos .input{
+    border: solid 0.1rem #f0f0f0;
+    padding: 0.25rem;
+    border-radius: 10rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.elementos .progreso{
+    background-color: #572d1e;
+}
+.elementos .avatar{
+    border-radius: 1rem;
+}
+/* Boton */
+.boton{
+    margin: 0.25rem 0.2rem;
+    background-color: greenyellow;
+    font-style: italic;
+    font-family: Cambria;
+}
+.boton p{
+    padding-bottom: 0.2rem;
+}
+.btnDeshabilitado:enabled{
+    border-radius: 10rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: Cambria;
+    border: solid 0.1rem #f0f0f0;
+    font-style: italic;
+}
+.toggleButton{
+    border-radius: 10rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: Cambria;
+    border: solid 0.1rem #f0f0f0;
+    font-style: italic;
+    margin-bottom: 0.2rem;
+}
+.toggleButton:hover{
+    border: solid 0.1rem #b62d2d;
+    background-color: #b62d2d;
+}
+.toggleButton:active{
+    border: solid 0.1rem yellow;
+    background-color: yellow;
+}
+/* Arreglo */
+.arreglo{
+    font-family: fantasy;
+    margin: 0.2rem 0.2rem;
+}
+.arreglo ul{
+    list-style: none;
+}
+.arreglo li{
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+.inDato{
+    font-family: fantasy;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+.inDato:focus{
+    background: royalblue;
+}
+.btnDelete, .btnAdd{
+    border-radius: 10rem;
+    border: solid 0.1rem #f0f0f0;
+    padding: 0.5rem;
+    margin: auto;
+    text-align:center;
+}
+.btnDelete:hover, .btnAdd:hover{
+    border: solid 0.1rem #aab62d69;
+    background-color: #aab62d69;
+}
+.btnDelete:active, .btnAdd:active{
+    border: solid 0.1rem royalblue;
+    background-color: royalblue;
+}
+/**/
+.box{
+    height: 200px;
+    width: 200px;
+    overflow: auto;
+    border: solid 1px black;
+}
+.focus:focus{
+    background: yellow;
+    color: green;
+}
+.oculto{
+    display: none;
+}
+.visible{
+    display: block;
+}

@@ -1,0 +1,22 @@
+.cabecera{
+    background-color: #287a6a;
+    color: white;
+}
+.menu{
+    list-style: none;
+}
+.menu li{
+    display: inline-block;
+    padding: 0.5rem;
+}
+.menu li:hover{
+    background-color: #29c9719c;
+    border-radius: 2rem;
+    font-style: oblique;
+    text-decoration: underline;
+}
+.menu li:active{
+    background-color: #a9f0c9dc;
+    color: black;
+    font-weight: bold;
+}
