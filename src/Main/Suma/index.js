@@ -7,12 +7,10 @@ const sum = (a, b) => {
 
 function Suma(){
     return (
-        <React.Fragment>
+        <div className='Suma'>
             <p>Retornando un valor de una funcion</p>
             <h4>sum(1,3) = { sum(1,3) }</h4>
-            <hr />
-            <hr />
-        </React.Fragment>
+        </div>
     );
 }
 

@@ -2,13 +2,11 @@ import React from 'react';
 
 function Tecleo({name, changeName, tecleo}){
     return(
-        <React.Fragment>
+        <div className='Tecleo'>
             <p>Detectar cada ves que se teclea obteniendo su valor</p>
-            <input type="text" defaultValue={ name } onKeyUp={ changeName } />
-            <p>Nombre { tecleo }</p>
-            <hr />
-            <hr />
-        </React.Fragment>
+            <input className='cambioTexto' type="text" defaultValue={ name } onKeyUp={ changeName } />
+            <p>Nombre <span className='escritura'>{ tecleo }</span></p>
+        </div>
     );
 }
 

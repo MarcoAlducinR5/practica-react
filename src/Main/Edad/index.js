@@ -2,14 +2,12 @@ import React from 'react';
 
 function Edad({edad, sumaEdad, restaEdad}){
     return (
-        <React.Fragment>
-            <p>Aumentando/Restando la edad</p>
-            <p>Edad { edad }</p>
-            <button onClick={ sumaEdad }>Age++</button>
-            <button onClick={ restaEdad }>Age--</button>
-            <hr />
-            <hr />
-        </React.Fragment>
+        <div className='edad'>
+            <p className='letreto'>Aumentando / Restando la edad</p>
+            <p>Edad <span className='dato'>{ edad }</span></p>
+            <button className='sumaEdad' onClick={ sumaEdad }>Age++</button>
+            <button className='restaEdad' onClick={ restaEdad }>Age--</button>
+        </div>
     );
 }
 

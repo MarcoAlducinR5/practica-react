@@ -3,28 +3,33 @@ import React from 'react';
 function Inputs({name, enfoque, desenfoque, texto, vacio, estaVacio, 
     nuevoValor, obtenerValor, sobrepaso, mayorMenor, edad, nombre, dato}){
     return (
-        <React.Fragment>
-            <p>Detecta si la caja de texto esta seleccionada o no </p>
-            <input type="text" placeholder='Texto' className='focus' defaultValue={name} onFocus={enfoque} onBlur={desenfoque} />
-            <div >{ texto }</div>
+        <div className='Inputs'>
+            <div className='seleccion'>
+                <p>Detecta si la caja de texto esta seleccionada o no </p>
+                <input type="text" placeholder='Texto' className='focus' defaultValue={name} onFocus={enfoque} onBlur={desenfoque} />
+                <p className='textoFocus'>{ texto }</p>
+            </div>
             <hr />
-            <p>Verificar si un input esta vacio o no</p>
-            <p>Nombre { name }</p>
-            <input type="text" placeholder='Texto' defaultValue={ name } required onKeyUp={estaVacio} />
-            <p>Vacio: { vacio }</p>
+            <div className='vacio'>
+                <p>Verificar si un input esta vacio <strong>True</strong> o no <strong>False</strong></p>
+                <input type="text" placeholder='Texto' defaultValue={ name } required onKeyUp={estaVacio} />
+                <p>Vacio: <span>{ vacio }</span></p>
+            </div>
             <hr />
-            <p>Verificar si un input esta fuera del rango o no</p>
-            <p>Dato: { nuevoValor }</p>
-            <input type="number" max="18" min="10" required  defaultValue={ edad } onInput={obtenerValor} onChange={mayorMenor} />
-            <p>Validacion: { sobrepaso }</p>
+            <div className='rango'>
+                <p>Verificar si un input esta fuera <strong>True</strong> del rango o no <strong>False</strong></p>
+                <p>Dato: { nuevoValor }</p>
+                <input type="number" max="18" min="10" required  defaultValue={ edad } onInput={obtenerValor} onChange={mayorMenor} />
+                <p>Validacion: <span>{ sobrepaso }</span></p>
+            </div>
             <hr />
-            <p>Evaluar si es nicolas o julian</p>
-            <input type="text" required onChange={nombre} defaultValue={ name } />
-            <p className={`oculto ${dato.estadoNicolas && 'visible'}`}>Soy Nicolas</p>
-            <p className={`oculto ${(dato.estadoJulian && edad === 18) && 'visible'}`}>Soy Julian</p>
-            <hr />
-            <hr />
-        </React.Fragment>
+            <div className='NicolasJulian'>
+                <p>Evaluar si es nicolas o julian</p>
+                <input type="text" required onChange={nombre} defaultValue={ name } />
+                <p className={`oculto ${dato.estadoNicolas && 'visible'}`}>Soy Nicolas</p>
+                <p className={`oculto ${(dato.estadoJulian && edad === 18) && 'visible'}`}>Soy Julian</p>
+            </div>
+        </div>
     );
 }
 

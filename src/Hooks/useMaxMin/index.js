@@ -17,11 +17,11 @@ function useMaxMin(mmQue){
         let min = event.target.min;
         let valor = event.target.value;
         if(valor < min || valor > max){
-            estado = "false";
+            estado = "true";
             mmQue = estado;
         }
         else{
-            estado = "true";
+            estado = "false";
             mmQue = estado;
         }
         setSobrepaso(mmQue);

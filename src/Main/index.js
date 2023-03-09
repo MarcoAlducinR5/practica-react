@@ -21,7 +21,11 @@ function Main({
     return(
         <main className="principal">
             <Titulo />
+            <hr />
+            <hr />
             <Suma />
+            <hr />
+            <hr />
             <Boton 
                 estado = {estado} toggleButton = {toggleButton}
             />

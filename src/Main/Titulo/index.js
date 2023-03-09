@@ -4,12 +4,10 @@ const username = 'SokramR5';
 
 function Titulo(){
     return (
-        <React.Fragment>
+        <div className='Titulo'>
             <p>Enviando dato de una variable</p>
             <h1>Mi username es =&gt; { username }</h1>
-            <hr />
-            <hr />
-        </React.Fragment>
+        </div>
     );
 }
 
