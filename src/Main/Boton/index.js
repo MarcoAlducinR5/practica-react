@@ -1,6 +1,10 @@
 import React from "react";
+import { PracticaContext } from "../../Context";
 
-function Boton({estado, toggleButton}){
+function Boton(){
+    
+    const {estado, toggleButton} = React.useContext(PracticaContext);
+    
     return (
         <div className="boton">
             <p>Habilitando o deshabilitando un boton con un Hook</p>

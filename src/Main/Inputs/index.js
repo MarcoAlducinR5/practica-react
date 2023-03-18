@@ -1,18 +1,24 @@
 import React from 'react';
+import { PracticaContext } from '../../Context';
 
-function Inputs({name, enfoque, desenfoque, texto, vacio, estaVacio, 
-    nuevoValor, obtenerValor, sobrepaso, mayorMenor, edad, nombre, dato}){
+function Inputs(){
+
+    const {marco, enfoque, desenfoque, texto, vacio, 
+        estaVacio, nuevoValor, obtenerValor, sobrepaso, 
+        mayorMenor, edad, nombre, dato} = 
+        React.useContext(PracticaContext);
+
     return (
         <div className='Inputs'>
             <div className='seleccion'>
                 <p>Detecta si la caja de texto esta seleccionada o no </p>
-                <input type="text" placeholder='Texto' className='focus' defaultValue={name} onFocus={enfoque} onBlur={desenfoque} />
+                <input type="text" placeholder='Texto' className='focus' defaultValue={marco.name} onFocus={enfoque} onBlur={desenfoque} />
                 <p className='textoFocus'>{ texto }</p>
             </div>
             <hr />
             <div className='vacio'>
                 <p>Verificar si un input esta vacio <strong>True</strong> o no <strong>False</strong></p>
-                <input type="text" placeholder='Texto' defaultValue={ name } required onKeyUp={estaVacio} />
+                <input type="text" placeholder='Texto' defaultValue={ marco.name } required onKeyUp={estaVacio} />
                 <p>Vacio: <span>{ vacio }</span></p>
             </div>
             <hr />
@@ -25,7 +31,7 @@ function Inputs({name, enfoque, desenfoque, texto, vacio, estaVacio,
             <hr />
             <div className='NicolasJulian'>
                 <p>Evaluar si es nicolas o julian</p>
-                <input type="text" required onChange={nombre} defaultValue={ name } />
+                <input type="text" required onChange={nombre} defaultValue={ marco.name } />
                 <p className={`oculto ${dato.estadoNicolas && 'visible'}`}>Soy Nicolas</p>
                 <p className={`oculto ${(dato.estadoJulian && edad === 18) && 'visible'}`}>Soy Julian</p>
             </div>

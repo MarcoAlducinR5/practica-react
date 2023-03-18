@@ -11,13 +11,7 @@ import { Inputs } from './Inputs';
 import { Arreglo } from './Arreglo';
 import './Main.css';
 
-function Main({
-    estado, toggleButton, marco, edad, sumaEdad, restaEdad, 
-    onScroll, posicion, name, changeName, tecleo,
-    texto1, dblClic, pasaElMouse, alejaElMouse, texto, enfoque, 
-    desenfoque, vacio, estaVacio, nuevoValor, obtenerValor, 
-    sobrepaso, mayorMenor, nombre, dato, addName, desgloseArregloNombre
-}){
+function Main(){
     return(
         <main className="principal">
             <Titulo />
@@ -26,52 +20,28 @@ function Main({
             <Suma />
             <hr />
             <hr />
-            <Boton 
-                estado = {estado} toggleButton = {toggleButton}
-            />
+            <Boton />
             <hr />
             <hr />
-            <DatosElementos 
-                marco = {marco} edad = { edad }
-            />
+            <DatosElementos />
             <hr />
             <hr />
-            <Edad
-                edad = { edad } sumaEdad = { sumaEdad }
-                restaEdad = { restaEdad }
-            />
+            <Edad />
             <hr />
             <hr />
-            <Desplazamiento 
-                onScroll = { onScroll } posicion = { posicion }
-            />
+            <Desplazamiento />
             <hr />
             <hr />
-            <Tecleo 
-                name= {name} changeName = {changeName}
-                tecleo = {tecleo}
-            />
+            <Tecleo  />
             <hr />
             <hr />
-            <Mouse 
-                texto1 = {texto1} dblClic = {dblClic}
-                pasaElMouse = {pasaElMouse} alejaElMouse = {alejaElMouse}
-            />
+            <Mouse />
             <hr />
             <hr />
-            <Inputs 
-                texto={texto} enfoque={enfoque} desenfoque={desenfoque}
-                name= {name} vacio={vacio} estaVacio={estaVacio}
-                edad={ edad } nuevoValor={nuevoValor} 
-                obtenerValor={obtenerValor} sobrepaso={sobrepaso}
-                mayorMenor={mayorMenor} nombre={nombre} dato={dato}
-            />
+            <Inputs />
             <hr />
             <hr />
-            <Arreglo 
-                addName={addName} 
-                desgloseArregloNombre={desgloseArregloNombre} 
-            />
+            <Arreglo />
             <hr/>
             <hr/>
         </main>

@@ -1,6 +1,10 @@
 import React from 'react';
+import { PracticaContext } from '../../Context';
 
-function Edad({edad, sumaEdad, restaEdad}){
+function Edad(){
+    
+    const {edad, sumaEdad, restaEdad} = React.useContext(PracticaContext);
+
     return (
         <div className='edad'>
             <p className='letreto'>Aumentando / Restando la edad</p>

@@ -1,6 +1,10 @@
 import React from "react";
+import { PracticaContext } from "../../Context";
 
-function DatosElementos({marco, edad}){
+function DatosElementos(){
+
+    const {marco, edad} = React.useContext(PracticaContext);
+
     return (
         <div className="elementos">
             <p>Enviando datos a elementos de HTML</p>

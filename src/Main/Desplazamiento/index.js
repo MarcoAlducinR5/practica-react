@@ -1,6 +1,10 @@
 import React from 'react';
+import { PracticaContext } from '../../Context';
 
-function Desplazamiento({onScroll, posicion}){
+function Desplazamiento(){
+
+    const {onScroll, posicion} = React.useContext(PracticaContext);
+
     return (
         <div className="Desplazamiento">
             <p>Leer en que posicion se encuentra un div con barra de desplazamiento</p>
